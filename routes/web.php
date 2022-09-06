@@ -3,7 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProveedoresController;
-
+use App\Http\Controllers\ClientesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+
+//Proveedores
 Route::get('/proveedores',[ProveedoresController::class,'index'])->name('proveedores.index');
 Route::get('/proveedores/create',[ProveedoresController::class,'create'])->name('proveedores.create');
 Route::post('/proveedores/store',[ProveedoresController::class,'store'])->name('proveedores.store');
@@ -26,4 +28,13 @@ Route::get('/proveedores/edit/{id}',[ProveedoresController::class,'edit'])->name
 Route::put('/proveedores/update/{id}',[ProveedoresController::class,'update'])->name('proveedores.update');
 Route::get('/proveedores/show/{id}',[ProveedoresController::class,'show'])->name('proveedores.show');
 Route::delete('/proveedores/destroy/{id}',[ProveedoresController::class,'destroy'])->name('proveedores.destroy');
+
+//Clientes
+Route::get('/clientes',[ClientesController::class,'index'])->name('clientes.index');
+Route::get('/clientes/create',[ClientesController::class,'create'])->name('clientes.create');
+Route::post('/clientes/store',[ClientesController::class,'store'])->name('clientes.store');
+Route::get('/clientes/edit/{id}',[ClientesController::class,'edit'])->name('clientes.edit');
+Route::put('/clientes/update/{id}',[ClientesController::class,'update'])->name('clientes.update');
+Route::get('/clientes/show/{id}',[ClientesController::class,'show'])->name('clientes.show');
+Route::delete('/clientes/destroy/{id}',[ClientesController::class,'destroy'])->name('clientes.destroy');
 
