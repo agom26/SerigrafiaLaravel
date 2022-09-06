@@ -44,15 +44,17 @@
                             </tbody>
                         </table>
                         <hr>
-                        <form action="{{ route('proveedores.destroy'),$proveedores->id }}" method="GET">
+                        
+                        <form action="{{ route('proveedores.destroy',$proveedores->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-
                             <a href="{{route('proveedores.index')}}" class="btn btn-info">Regresar</a>
                             <button class="btn btn-danger">
                                 Eliminar
                             </button>
                         </form>
+                            
+                       
                       </div>
                   </p>
                 </div>

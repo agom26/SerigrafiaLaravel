@@ -48,9 +48,10 @@ class ProveedoresController extends Controller
      * @param  \App\Models\Proveedores  $proveedores
      * @return \Illuminate\Http\Response
      */
-    public function show(Proveedores $proveedores)
+    public function show($id)
     {
-        echo view ('Dashboard.Proveedor.eliminate');
+        $proveedores=Proveedores::find($id);
+        return view ('Dashboard.Proveedor.eliminate',compact('proveedores'));
     }
 
     /**
@@ -61,11 +62,7 @@ class ProveedoresController extends Controller
      */
     public function edit($id)
     {
-
-        //$proveedores=Proveedores::find($id);
-        //return view ('Dashboard.Proveedor.update',compact('proveedores'));
-        echo $id;
-
+        
         $proveedores=Proveedores::find($id);
         return view ('Dashboard.Proveedor.update',compact('proveedores'));
     }
@@ -96,8 +93,11 @@ class ProveedoresController extends Controller
      * @param  \App\Models\Proveedores  $proveedores
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Proveedores $proveedores)
+    public function destroy($id)
     {
-        //
+        $proveedores=Proveedores::find($id);
+        $proveedores->delete();
+
+        return redirect('/proveedores')->with('status','Eliminado con éxito');
     }
 }

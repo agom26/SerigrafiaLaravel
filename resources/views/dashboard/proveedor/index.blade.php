@@ -114,7 +114,7 @@
                                             </form>
                                         </td>
                                         <td>
-                                            <form >
+                                            <form action="{{ route("proveedores.show",$proveedor->id) }}" method="GET">
                                                 <button class="btn btn-danger btn-sm">Eliminar</button>
                                             </form>
                                         </td>

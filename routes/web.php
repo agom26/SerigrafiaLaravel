@@ -24,5 +24,6 @@ Route::get('/proveedores/create',[ProveedoresController::class,'create'])->name(
 Route::post('/proveedores/store',[ProveedoresController::class,'store'])->name('proveedores.store');
 Route::get('/proveedores/edit/{id}',[ProveedoresController::class,'edit'])->name('proveedores.edit');
 Route::put('/proveedores/update/{id}',[ProveedoresController::class,'update'])->name('proveedores.update');
-Route::get('/proveedores/show',[ProveedoresController::class,'show'])->name('proveedores.show');
+Route::get('/proveedores/show/{id}',[ProveedoresController::class,'show'])->name('proveedores.show');
+Route::delete('/proveedores/destroy/{id}',[ProveedoresController::class,'destroy'])->name('proveedores.destroy');
 
