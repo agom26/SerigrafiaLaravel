@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\CategoriasController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\ClientesController;
@@ -37,4 +37,13 @@ Route::get('/clientes/edit/{id}',[ClientesController::class,'edit'])->name('clie
 Route::put('/clientes/update/{id}',[ClientesController::class,'update'])->name('clientes.update');
 Route::get('/clientes/show/{id}',[ClientesController::class,'show'])->name('clientes.show');
 Route::delete('/clientes/destroy/{id}',[ClientesController::class,'destroy'])->name('clientes.destroy');
+
+//Categorias
+Route::get('/categorias',[CategoriasController::class,'index'])->name('categorias.index');
+Route::get('/categorias/create',[CategoriasController::class,'create'])->name('categorias.create');
+Route::post('/categorias/store',[CategoriasController::class,'store'])->name('categorias.store');
+Route::get('/categorias/edit/{id}',[CategoriasController::class,'edit'])->name('categorias.edit');
+Route::put('/categorias/update/{id}',[CategoriasController::class,'update'])->name('categorias.update');
+Route::get('/categorias/show/{id}',[CategoriasController::class,'show'])->name('categorias.show');
+Route::delete('/categorias/destroy/{id}',[CategoriasController::class,'destroy'])->name('categorias.destroy');
 
