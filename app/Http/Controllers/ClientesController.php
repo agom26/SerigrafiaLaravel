@@ -75,7 +75,7 @@ class ClientesController extends Controller
     {
         $clientes=Clientes::find($id);
         $clientes->nombre=$request->post('nombre');
-        $clientes->correo=$request->post('nit');
+        $clientes->nit=$request->post('nit');
         $clientes->telefono=$request->post('telefono');
         $clientes->save();
 

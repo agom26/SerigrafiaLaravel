@@ -19,7 +19,7 @@
         <div class="container">
             <div class="card">
                 <div class="card-header">
-                  <h1>Ingreso de proveedores</h1>
+                  <h1>Actualización de proveedor</h1>
                 </div>
                 <div class="card-body">
                   <div class="card-text">
