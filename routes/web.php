@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoriasController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\RolesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,4 +47,13 @@ Route::get('/categorias/edit/{id}',[CategoriasController::class,'edit'])->name('
 Route::put('/categorias/update/{id}',[CategoriasController::class,'update'])->name('categorias.update');
 Route::get('/categorias/show/{id}',[CategoriasController::class,'show'])->name('categorias.show');
 Route::delete('/categorias/destroy/{id}',[CategoriasController::class,'destroy'])->name('categorias.destroy');
+
+//Roles
+Route::get('/roles',[RolesController::class,'index'])->name('roles.index');
+Route::get('/roles/create',[RolesController::class,'create'])->name('roles.create');
+Route::post('/roles/store',[RolesController::class,'store'])->name('roles.store');
+Route::get('/roles/edit/{id}',[RolesController::class,'edit'])->name('roles.edit');
+Route::put('/roles/update/{id}',[RolesController::class,'update'])->name('roles.update');
+Route::get('/roles/show/{id}',[RolesController::class,'show'])->name('roles.show');
+Route::delete('/roles/destroy/{id}',[RolesController::class,'destroy'])->name('roles.destroy');
 

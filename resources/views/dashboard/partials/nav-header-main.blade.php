@@ -18,6 +18,7 @@
               <li><a class="dropdown-item" href={{route('proveedores.index')}}>Proveedores</a></li>
               <li><a class="dropdown-item" href="{{route('clientes.index')}}">Clientes</a></li>
               <li><a class="dropdown-item" href="{{route('categorias.index')}}">Categorias</a></li>
+              <li><a class="dropdown-item" href="{{route('roles.index')}}">Roles</a></li>
               <li><hr class="dropdown-divider"></li>
             </ul>
           </li>
