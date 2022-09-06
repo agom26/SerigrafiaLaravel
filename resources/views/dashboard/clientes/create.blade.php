@@ -57,7 +57,7 @@
                             <br>
                             
                             <a href="{{route('clientes.index')}}" class="btn btn-info">Regresar</a>
-                            <button class="btn btn-primary">Enviar</button>
+                            <button class="btn btn-primary">Crear</button>
                         
                     </form>
                   </div>
